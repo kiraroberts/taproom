@@ -6,11 +6,8 @@ import TapList from "./TapList";
 import Error404 from "./Error404";
 
 function App() {
-  var globalStyle = {
-    backgroundColor : "crimson",
-  };
   return (
-    <div style={globalStyle} className="container">
+    <div className="container">
       <NavBar/>
       <Switch>
         <Route exact path="/" component={Home}/>

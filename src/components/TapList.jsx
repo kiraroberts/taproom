@@ -1,5 +1,4 @@
 import React from "react";
-import Tap from "./Tap";
 
 var masterTapList = [
   {
@@ -16,7 +15,7 @@ var masterTapList = [
   },
   {
     name: "name",
-    brand: brand,
+    brand: "brand",
     price: "",
     alcoholContent: ""
   },
@@ -38,7 +37,7 @@ function TapList() {
   return (
     <div>
       {masterTapList.map((Tap, index) =>
-        <Student name={Tap.name}
+        <Tap name={Tap.name}
           brand={Tap.brand}
           price={Tap.price}
           alcoholContent={Tap.alcoholContent}

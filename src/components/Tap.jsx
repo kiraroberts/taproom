@@ -12,7 +12,6 @@ function Tap(props) {
           <h3>{props.brand}</h3>
           <h3>{props.alcoholContent}</h3>
           <h2>{props.price}</h2>
-          <h5>"{props.quote}"</h5>
         </div>
       </div>
     </div>
