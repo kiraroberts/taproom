@@ -7,15 +7,17 @@ import Error404 from "./Error404";
 
 function App() {
   return (
-    <div className="container">
-      <NavBar/>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <div className="row">
-          <Route path = "/taplist" component={TapList}/>
-        </div>
-        <Route component={Error404}/>
-      </Switch>
+    <div>
+      <NavBar />
+      <div className="container">
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <div className="row">
+            <Route path = "/taplist" component={TapList}/>
+          </div>
+          <Route component={Error404}/>
+        </Switch>
+      </div>
     </div>
   );
 }
