@@ -3,11 +3,24 @@ import PropTypes from "prop-types";
 
 
 function Tap(props) {
+  var tapStyle = {
+    width: "300px",
+    height: "400px",
+    textAlign: "center",
+    // padding: "15",
+    backgroundColor: "blanchedalmond",
+    margin: "5px",
+  };
+  var contentStyle = {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
   return (
 
-    <div className="">
+    <div style={contentStyle} className="">
       <div className="">
-        <div className="col s3 card">
+        <div style={tapStyle} className="col s3 card">
           <h2 >{props.name}</h2>
           <h3>{props.brand}</h3>
           <h3>{props.alcoholContent}</h3>

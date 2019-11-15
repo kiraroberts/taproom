@@ -25,7 +25,7 @@ function NavBar() {
     <nav>
       <div style={navBar}>
         <button className="btn" style={navBarButton}><Link style={navLink} to="/">Home</Link></button>
-        <button className="btn" style={navBarButton}><Link style={navLink} to="/Tap">Taps</Link></button>
+        <button className="btn" style={navBarButton}><Link style={navLink} to="/TapList">Taps</Link></button>
         <button className="btn" style={navBarButton}><Link style={navLink} to="/NewTapForm">Add a tap</Link></button>
       </div>
     </nav>
