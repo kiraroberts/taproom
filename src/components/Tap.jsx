@@ -8,7 +8,7 @@ function Tap(props) {
     height: "400px",
     textAlign: "center",
     // padding: "15",
-    backgroundColor: "blanchedalmond",
+    backgroundColor: "lightgray",
     margin: "5px",
   };
   var contentStyle = {
