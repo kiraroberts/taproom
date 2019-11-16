@@ -3,34 +3,34 @@ import Tap from "./Tap";
 
 var masterTapList = [
   {
-    name: "name",
-    brand: "brand",
-    price: "price",
-    alcoholContent: " ",
+    name: "Pilsner",
+    brand: "pFriem",
+    price: "$5",
+    alcoholContent: "4.9%",
   },
   {
-    name: "name",
-    brand: "brand",
-    price: "",
-    alcoholContent: ""
+    name: "IPA",
+    brand: "Lagunitas",
+    price: "$5",
+    alcoholContent: "6.2%"
   },
   {
-    name: "name",
-    brand: "brand",
-    price: "",
-    alcoholContent: ""
+    name: "Guinness Draught",
+    brand: "Guinness",
+    price: "$4",
+    alcoholContent: "4.2%"
   },
   {
-    name: "name",
-    brand: "brand",
-    price: "",
-    alcoholContent: ""
+    name: "Black Butte Porter",
+    brand: "Deschutes Brewery",
+    price: "$4.50",
+    alcoholContent: "5.2%"
   },
   {
-    name: "name",
-    brand: "brand",
-    price: "",
-    alcoholContent: ""
+    name: "Supplication",
+    brand: "Russian River Brewing Company",
+    price: "$7.50",
+    alcoholContent: "7.75%"
   },
 ];
 
