@@ -9,7 +9,7 @@ Kira Roberts Oct. 2019. Built for Portland Epicodus React track.
 
 ## SET-UP
 
-- from terminal, navigate to desktop and run 'git clone https://github.com/kiraroberts/Taproom.git' 
+- from terminal, navigate to desktop and run 'git clone https://github.com/kiraroberts/taproom.git' 
 - navigate to 'Taproom' project directory and run 'npm i'
 - run 'npm run start' and navigate to the supplied local host link
 
