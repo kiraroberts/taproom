@@ -19,7 +19,7 @@ Kira Roberts Oct. 2019. Built for Portland Epicodus React track.
 
 ## TECH USED
 
-React, JavaScript
+React, JavaScript, Materialize
 
 ## LICENSE
 
