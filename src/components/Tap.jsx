@@ -21,10 +21,10 @@ function Tap(props) {
     <div style={contentStyle} className="">
       <div className="">
         <div style={tapStyle} className="col s3 card">
-          <h2 >{props.name}</h2>
-          <h3>{props.brand}</h3>
-          <h3>{props.alcoholContent}</h3>
-          <h2>{props.price}</h2>
+          <h4 >{props.name}</h4>
+          <h4>{props.brand}</h4>
+          <h4>{props.alcoholContent}</h4>
+          <h4>{props.price}</h4>
         </div>
       </div>
     </div>
