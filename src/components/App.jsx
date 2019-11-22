@@ -4,14 +4,14 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import TapList from "./TapList";
 import Error404 from "./Error404";
-import { v4 } from 'uuid';
+import { v4 } from "uuid";
 import NewTapForm from "./NewTapForm";
 
 class App extends React.component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: {}
+      masterTapList: {},
     };
     this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
   }
@@ -19,8 +19,8 @@ class App extends React.component {
     var newTapId = v4();
     var newMasterTapList = Object.assign(
       {}, this.state.masterTapList, {
-      [newTapId]: newTap
-    });
+        [newTapId]: newTap
+      });
     this.setState({masterTicketList: newMasterTapList});
   }
 
@@ -32,7 +32,7 @@ class App extends React.component {
           <Switch>
             <Route exact path="/" component={Home} />
             <div className="row">
-              <Route path="/taplist" TapList={this.state.masterTapList} />
+              <Route path="/taplist" render={() => <TapList tapList={this.state.masterTapList} />} />
             </div>
             <Route path='/newtapform' render={() => <NewTapForm
               onNewTapCreation={this.handleAddingNewTapToList} />} />

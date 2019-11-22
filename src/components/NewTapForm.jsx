@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function NewTapForm(props) {
   let _name = null;
@@ -10,10 +10,10 @@ function NewTapForm(props) {
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
     props.onNewTapCreation({ name: _name.value, brand: _brand.value, alcoholContent: _alcoholContent.value, price: _price.value });
-    _name.value = '';
-    _brand.value = '';
-    _alcoholContent.value = '';
-    _price.value = '';
+    _name.value = "";
+    _brand.value = "";
+    _alcoholContent.value = "";
+    _price.value = "";
   }
 
   return (

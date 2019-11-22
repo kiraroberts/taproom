@@ -1,6 +1,6 @@
 import React from "react";
 import Tap from "./Tap";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // var masterTapList = [
 //   {
@@ -46,15 +46,15 @@ function TapList(props) {
           alcoholContent={tap.alcoholContent}
           key={tapId}
           tapId={tapId} 
-          />;
-        })}
-      </div>
+        />;
+      })}
+    </div>
   );
 }
 
 TapList.propTypes = {
   tapList: PropTypes.object
-}
+};
 
 
 export default TapList;
