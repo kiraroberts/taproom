@@ -7,7 +7,7 @@ import Error404 from "./Error404";
 import { v4 } from "uuid";
 import NewTapForm from "./NewTapForm";
 
-class App extends React.component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
