@@ -9,22 +9,22 @@ function NewTapForm(props) {
 
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
-    props.onNewTapCreation({name: _name.value, brand: _brand.value, alcoholContent: _alcoholContent.value, price: _price.value});
+    props.onNewTapCreation({ name: _name.value, brand: _brand.value, alcoholContent: _alcoholContent.value, price: _price.value });
     _name.value = '';
     _brand.value = '';
     _alcoholContent.value = '';
     _price.value = '';
   }
 
-  return(
+  return (
     <div>
       <h2>Add a keg</h2>
-      <form onSubmit={handleNewTicketFormSubmission}>
-        <input 
+      <form onSubmit={handleNewTapFormSubmission}>
+        <input
           type='text'
           id='name'
           placeholder='drink name'
-          ref={(input) => {_name = input;}}/>
+          ref={(input) => { _name = input; }} />
         <input
           type='text'
           id='brand'
@@ -43,8 +43,8 @@ function NewTapForm(props) {
         <button type='submit'>Add</button>
       </form>
     </div>
-  )
-};
+  );
+}
 
 NewTapForm.propTypes = {
   onNewTapCreation: PropTypes.func

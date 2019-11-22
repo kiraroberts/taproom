@@ -13,27 +13,29 @@ class App extends React.component {
     this.state = {
       masterTapList: {}
     };
-    this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this); 
+    this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
   }
   handleAddingNewTapToList(newTap) {
     var newTapId = v4();
     var newMasterTapList = Object.assign(
-    {}, this.state.masterTapList, {
+      {}, this.state.masterTapList, {
       [newTapId]: newTap
     });
+    this.setState({masterTicketList: newMasterTapList});
   }
 
   render() {
-    return(
+    return (
       <div>
         <NavBar />
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
             <div className="row">
-              <Route path="/taplist" component={TapList} />
+              <Route path="/taplist" TapList={this.state.masterTapList} />
             </div>
-            <Route path='/newtapform' render={() => <NewTapForm onNewTapCreation ={this.handleAddingNewTapToList}/>} />
+            <Route path='/newtapform' render={() => <NewTapForm
+              onNewTapCreation={this.handleAddingNewTapToList} />} />
             <Route component={Error404} />
           </Switch>
         </div>
