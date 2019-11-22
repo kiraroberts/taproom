@@ -52,7 +52,7 @@ function TapList(props) {
 }
 
 TapList.propTypes = {
-  tapList: PropTypes.object
+  tapList: PropTypes.array
 };
 
 

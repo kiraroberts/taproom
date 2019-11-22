@@ -28,9 +28,9 @@ class App extends React.Component {
         <div className="container">
           <Switch>
             <Route exact path="/" component={Home} />
-            <div className="row">
+            {/* <div className="row"> */}
               <Route path="/taplist" render={() => <TapList tapList={this.state.masterTapList} />} />
-            </div>
+            {/* </div> */}
             <Route path='/newtapform' render={() => <NewTapForm
               onNewTapCreation={this.handleAddingNewTapToList} />} />
             <Route component={Error404} />
