@@ -4,22 +4,40 @@ import Home from "./Home";
 import NavBar from "./NavBar";
 import TapList from "./TapList";
 import Error404 from "./Error404";
+import { v4 } from 'uuid';
 
-function App() {
-  return (
-    <div>
-      <NavBar />
-      <div className="container">
-        <Switch>
-          <Route exact path="/" component={Home}/>
-          <div className="row">
-            <Route path = "/taplist" component={TapList}/>
-          </div>
-          <Route component={Error404}/>
-        </Switch>
+class App extends React.component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      masterTapList: {}
+    };
+    this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this); 
+  }
+  handleAddingNewTapToList(newTap) {
+    var newTapId = v4();
+    var newMasterTapList = Object.assign(
+    {}, this.state.masterTapList, {
+      [newTapId]: newTap
+    });
+  }
+
+  render() {
+    return(
+      <div>
+        <NavBar />
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <div className="row">
+              <Route path="/taplist" component={TapList} />
+            </div>
+            <Route component={Error404} />
+          </Switch>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
