@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import TapList from "./TapList";
 import Error404 from "./Error404";
 import { v4 } from 'uuid';
+import NewTapForm from "./NewTapForm";
 
 class App extends React.component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends React.component {
             <div className="row">
               <Route path="/taplist" component={TapList} />
             </div>
+            <Route path='/newtapform' render={() => <NewTapForm onNewTapCreation ={this.handleAddingNewTapToList}/>} />
             <Route component={Error404} />
           </Switch>
         </div>
