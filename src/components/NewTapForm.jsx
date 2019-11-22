@@ -1,5 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 function NewTapForm(props) {
   let _name = null;
@@ -10,10 +11,10 @@ function NewTapForm(props) {
   function handleNewTapFormSubmission(event) {
     event.preventDefault();
     props.onNewTapCreation({ name: _name.value, brand: _brand.value, alcoholContent: _alcoholContent.value, price: _price.value });
-    _name.value = "";
-    _brand.value = "";
-    _alcoholContent.value = "";
-    _price.value = "";
+    _name.value = '';
+    _brand.value = '';
+    _alcoholContent.value = '';
+    _price.value = '';
   }
 
   return (
@@ -23,22 +24,22 @@ function NewTapForm(props) {
         <input
           type='text'
           id='name'
-          placeholder='drink name'
+          placeholder='Drink name'
           ref={(input) => { _name = input; }} />
         <input
           type='text'
           id='brand'
-          placeholder='brand name'
+          placeholder='Brand name'
           ref={(input) => { _brand = input; }} />
         <input
           type='text'
           id='alcoholContent'
-          placeholder='alcohol content'
+          placeholder='Alcohol content'
           ref={(input) => { _alcoholContent = input; }} />
         <input
           type='text'
           id='price'
-          placeholder='drink price'
+          placeholder='Drink price'
           ref={(input) => { _price = input; }} />
         <button type='submit'>Add</button>
       </form>

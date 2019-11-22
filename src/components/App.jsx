@@ -11,17 +11,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterTapList: {},
+      masterTapList: [],
     };
     this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
   }
   handleAddingNewTapToList(newTap) {
-    var newTapId = v4();
-    var newMasterTapList = Object.assign(
-      {}, this.state.masterTapList, {
-        [newTapId]: newTap
-      });
-    this.setState({masterTicketList: newMasterTapList});
+    var newMasterTapList = this.state.masterTapList.slice();
+    newMasterTapList.push(newTap);
+    this.setState({ masterTapList: newMasterTapList});
   }
 
   render() {

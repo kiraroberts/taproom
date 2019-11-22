@@ -36,7 +36,7 @@ Tap.propTypes = {
   brand: PropTypes.string,
   price: PropTypes.string,
   alcoholContent: PropTypes.string,
-  ticketId: PropTypes.string.isRequired,
+  tapId: PropTypes.string.isRequired,
   key: PropTypes.string
 };
 

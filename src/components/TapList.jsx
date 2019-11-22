@@ -38,16 +38,15 @@ import PropTypes from "prop-types";
 function TapList(props) {
   return (
     <div>
-      {Object.keys(props.tapList).map(function(tapId) {
-        var tap = props.tapList[tapId];
-        return <Tap name={tap.name}
+      {props.tapList.map((tap) =>
+        <Tap name={tap.name}
           brand={tap.brand}
           price={tap.price}
           alcoholContent={tap.alcoholContent}
-          key={tapId}
-          tapId={tapId} 
-        />;
-      })}
+          key={tap.Id}
+          tapId={tap.Id} 
+        />
+      )}
     </div>
   );
 }
