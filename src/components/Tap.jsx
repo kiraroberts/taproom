@@ -35,7 +35,9 @@ Tap.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
   price: PropTypes.string,
-  alcoholContent: PropTypes.string
+  alcoholContent: PropTypes.string,
+  ticketId: PropTypes.string.isRequired,
+  key: PropTypes.string
 };
 
 export default Tap;
