@@ -33,6 +33,11 @@ class App extends React.Component {
             {/* </div> */}
             <Route path='/newtapform' render={() => <NewTapForm
               onNewTapCreation={this.handleAddingNewTapToList} />} />
+            <Route path='/employee' render={(props) => <Employee
+              tapList={this.state.masterTapList}
+              currentRouterPath={props.location.pathname}
+              onTapSelection={this.handleChangingSelectedTap}
+              selectedTap={this.state.selectedTap} />} />
             <Route component={Error404} />
           </Switch>
         </div>
